@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="-urllib," />
+  <meta name="keywords" content="urllib," />
 
 
 
@@ -79,18 +79,21 @@
 
 
 
-<meta name="description" content="风生水起靠自己">
-<meta name="keywords" content="-urllib">
+<meta name="description" content="urllib库的使用扒一个网页怎样扒网页呢？其实就是根据URL来获取它的网页信息，虽然我们在浏览器中看到的是一幅幅优美的画面，但是其实是由浏览器解释才呈现出来的，实质它 是一段HTML代码，加 JS、CSS，如果把网页比作一个人，那么HTML便是他的骨架，JS便是他的肌肉，CSS便是它的衣服。所以最重要的部分是存在于H">
+<meta name="keywords" content="urllib">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Urllib库">
 <meta property="og:url" content="https://hanyueye.github.io/2017/12/04/爬虫2/index.html">
 <meta property="og:site_name" content="如果还有梦就追">
-<meta property="og:description" content="风生水起靠自己">
+<meta property="og:description" content="urllib库的使用扒一个网页怎样扒网页呢？其实就是根据URL来获取它的网页信息，虽然我们在浏览器中看到的是一幅幅优美的画面，但是其实是由浏览器解释才呈现出来的，实质它 是一段HTML代码，加 JS、CSS，如果把网页比作一个人，那么HTML便是他的骨架，JS便是他的肌肉，CSS便是它的衣服。所以最重要的部分是存在于HTML中的，下面我 们就写个例子来扒一个网页下来。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-04T12:21:05.649Z">
+<meta property="og:image" content="http://i4.bvimg.com/621817/325ff2d4ef74c909.png">
+<meta property="og:image" content="http://i1.bvimg.com/621817/d196c76e27ce0a6d.png">
+<meta property="og:updated_time" content="2017-12-04T13:24:39.989Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Urllib库">
-<meta name="twitter:description" content="风生水起靠自己">
+<meta name="twitter:description" content="urllib库的使用扒一个网页怎样扒网页呢？其实就是根据URL来获取它的网页信息，虽然我们在浏览器中看到的是一幅幅优美的画面，但是其实是由浏览器解释才呈现出来的，实质它 是一段HTML代码，加 JS、CSS，如果把网页比作一个人，那么HTML便是他的骨架，JS便是他的肌肉，CSS便是它的衣服。所以最重要的部分是存在于HTML中的，下面我 们就写个例子来扒一个网页下来。">
+<meta name="twitter:image" content="http://i4.bvimg.com/621817/325ff2d4ef74c909.png">
 
 
 
@@ -349,8 +352,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python-爬虫/" itemprop="url" rel="index">
-                    <span itemprop="name">Python(爬虫)</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/爬虫/" itemprop="url" rel="index">
+                    <span itemprop="name">爬虫</span>
                   </a>
                 </span>
 
@@ -386,7 +400,42 @@
       
 
       
-        
+        <h1 id="urllib库的使用"><a href="#urllib库的使用" class="headerlink" title="urllib库的使用"></a>urllib库的使用</h1><h2 id="扒一个网页"><a href="#扒一个网页" class="headerlink" title="扒一个网页"></a>扒一个网页</h2><p>怎样扒网页呢？其实就是根据URL来获取它的网页信息，虽然我们在浏览器中看到的是一幅幅优美的画面，但是其实是由浏览器解释才呈现出来的，实质它 是一段HTML代码，加 JS、CSS，如果把网页比作一个人，那么HTML便是他的骨架，JS便是他的肌肉，CSS便是它的衣服。所以最重要的部分是存在于HTML中的，下面我 们就写个例子来扒一个网页下来。<br><a id="more"></a><br>在pycharm里新建一个.py的文件名字叫firstparser.py<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import urllib2</span><br><span class="line"></span><br><span class="line">response = urllib2.urlopen(&quot;http://www.baidu.com&quot;)</span><br><span class="line">print response.read()</span><br></pre></td></tr></table></figure></p>
+<p>是的你没看错，真正的程序就两行，右键选择 <code>run</code> ，查看运行结果，感受一下:<br><img src="http://i4.bvimg.com/621817/325ff2d4ef74c909.png" alt="Aaron Swartz"><br>看，这个网页的源码已经被我们扒下来了，是不是很酸爽？</p>
+<h2 id="分析扒网页的方法"><a href="#分析扒网页的方法" class="headerlink" title="分析扒网页的方法"></a>分析扒网页的方法</h2><p>那么我们来分析这两行代码，第一行:</p>
+<p><code>response = urllib2.urlopen(&quot;http://www.baidu.com&quot;)</code></p>
+<p>首先我们调用的是urllib2库里面的<code>urlopen</code>方法，传入一个URL，这个网址是百度首页，协议是HTTP协议，当然你也可以把HTTP换做<code>FTP,FILE,HTTPS</code> 等等，只是代表了一种访问控制协议，<code>urlopen</code>一般接受三个参数，它的参数如下：</p>
+<p><code>urlopen(url, data, timeout)</code></p>
+<p>第一个参数url即为URL，第二个参数data是访问URL时要传送的数据，第三个timeout是设置超时时间。</p>
+<p>第二三个参数是可以不传送的，data默认为空None，timeout默认为 socket._GLOBAL_DEFAULT_TIMEOUT</p>
+<p>第一个参数URL是必须要传送的，在这个例子里面我们传送了百度的URL，执行urlopen方法之后，返回一个response对象，返回信息便保存在这里面。</p>
+<p><code>print response.read()</code></p>
+<p>response对象有一个read方法，可以返回获取到的网页内容。</p>
+<h2 id="构造Requset"><a href="#构造Requset" class="headerlink" title="构造Requset"></a>构造Requset</h2><p>其实上面的urlopen参数可以传入一个request请求,它其实就是一个Request类的实例，构造时需要传入Url,Data等等的内容。比如上面的两行代码，我们可以这么改写:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import urllib2</span><br><span class="line"></span><br><span class="line">request = urllib2.Request(&quot;http://www.baidu.com&quot;)</span><br><span class="line">response = urllib2.urlopen(request)</span><br><span class="line">print response.read()</span><br></pre></td></tr></table></figure></p>
+<p>运行结果是完全一样的，只不过中间多了一个request对象，推荐大家这么写，因为在构建请求时还需要加入好多内容，通过构建一个request，服务器响应请求得到应答，这样显得逻辑上清晰明确。</p>
+<h2 id="POST和GET数据传送"><a href="#POST和GET数据传送" class="headerlink" title="POST和GET数据传送"></a>POST和GET数据传送</h2><p>上面的程序演示了最基本的网页抓取，不过，现在大多数网站都是动态网页，需要你动态地传递参数给它，数据传送分为POST和GET两种方式:</p>
+<h3 id="POST"><a href="#POST" class="headerlink" title="POST"></a>POST</h3><p>我们传送的数据就是这个参数data，下面演示一下POST方式。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import urllib</span><br><span class="line">import urllib2</span><br><span class="line"></span><br><span class="line">values = &#123;&quot;username&quot;:&quot;1016903103@qq.com&quot;,&quot;password&quot;:&quot;XXXX&quot;&#125;</span><br><span class="line">data = urllib.urlencode(values)</span><br><span class="line">url = &quot;https://passport.csdn.net/account/login?from=http://my.csdn.net/my/mycsdn&quot;</span><br><span class="line">request = urllib2.Request(url,data)</span><br><span class="line">response = urllib2.urlopen(request)</span><br><span class="line">print response.read()</span><br></pre></td></tr></table></figure></p>
+<p>在此只是说明登录的原理。我们需要定义一个字典，名字为values，参数我设置了username和 password，下面利用urllib的urlencode方法将字典编码，命名为data，构建request时传入两个参数，url和data，运 行程序，即可实现登陆，返回的便是登陆后呈现的页面内容。当然你可以自己搭建一个服务器来测试一下。</p>
+<h3 id="GET方式"><a href="#GET方式" class="headerlink" title="GET方式"></a>GET方式</h3><p>至于GET方式我们可以直接把参数写到网址上面，直接构建一个带参数的URL出来即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import urllib</span><br><span class="line">import urllib2</span><br><span class="line"></span><br><span class="line">values=&#123;&#125;</span><br><span class="line">values[&apos;username&apos;] = &quot;1016903103@qq.com&quot;</span><br><span class="line">values[&apos;password&apos;]=&quot;XXXX&quot;</span><br><span class="line">data = urllib.urlencode(values)</span><br><span class="line">url = &quot;http://passport.csdn.net/account/login&quot;</span><br><span class="line">geturl = url + &quot;?&quot;+data</span><br><span class="line">request = urllib2.Request(geturl)</span><br><span class="line">response = urllib2.urlopen(request)</span><br><span class="line">print response.read()</span><br></pre></td></tr></table></figure></p>
+<p>你可以print geturl，打印输出一下url，发现其实就是原来的url加？然后加编码后的参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://passport.csdn.net/account/login?username=1016903103%40qq.com&amp;password=XXXX</span><br></pre></td></tr></table></figure></p>
+<h1 id="urllib库的扩展"><a href="#urllib库的扩展" class="headerlink" title="urllib库的扩展"></a>urllib库的扩展</h1><h2 id="设置Headers"><a href="#设置Headers" class="headerlink" title="设置Headers"></a>设置Headers</h2><p>有些网站不会同意程序直接用上面的方式进行访问，如果识别有问题，那么站点根本不会响应，所以为了完全模拟浏览器的工作，我们需要设置一些Headers 的属性。</p>
+<p>首先，打开我们的浏览器，调试浏览器F12，我用的是Chrome，打开网络监听经过多次请求之后，网页的骨架和肌肉全了，整个网页的效果也就出来了。</p>
+<p><img src="http://i1.bvimg.com/621817/d196c76e27ce0a6d.png" alt="Aaron Swartz"></p>
+<p>拆分这些请求，我们只看一第一个请求，你可以看到，有个<code>Request URL，</code>还有<code>headers</code>，下面便是<code>response</code>，这个头中包含了许许多多是信息，有文件编码啦，压缩方式啦，请求的agent啦等等。</p>
+<p>其中，<code>agent</code>就是请求的身份，如果没有写入请求身份，那么服务器不一定会响应，所以可以在<code>headers</code>中设置<code>agent</code>,例如下面的例子，这个例子只是说明了怎样设置的<code>headers</code>，小伙伴们看一下设置格式就好。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import urllib</span><br><span class="line">import urllib2</span><br><span class="line"></span><br><span class="line">url = &apos;http://www.server.com/login&apos;</span><br><span class="line">user_agent = &apos;Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)&apos;</span><br><span class="line">values = &#123;&apos;username&apos; : &apos;cqc&apos;,</span><br><span class="line">&apos;password&apos; : &apos;XXXX&apos;</span><br><span class="line">&#125;</span><br><span class="line">headers = &#123; &apos;User-Agent&apos; : user_agent &#125;</span><br><span class="line">data = urllib.urlencode(values)</span><br><span class="line">request = urllib2.Request(url, data, headers)</span><br><span class="line">response = urllib2.urlopen(request)</span><br><span class="line">page = response.read()</span><br></pre></td></tr></table></figure></p>
+<p>这样，我们设置了一个headers，在构建request时传入，在请求时，就加入了headers传送，服务器若识别了是浏览器发来的请求，就会得到响应。</p>
+<blockquote>
+<p>另外headers的一些属性，下面的需要特别注意一下：<br>User-Agent : 有些服务器或 Proxy 会通过该值来判断是否是浏览器发出的请求<br>Content-Type : 在使用 REST 接口时，服务器会检查该值，用来确定 HTTP Body 中的内容该怎样解析。<br>application/xml ： 在 XML RPC，如 RESTful/SOAP 调用时使用<br>application/json ： 在 JSON RPC 调用时使用<br>application/x-www-form-urlencoded ： 浏览器提交 Web 表单时使用<br>在使用服务器提供的 RESTful 或 SOAP 服务时， Content-Type 设置错误会导致服务器拒绝服务</p>
+</blockquote>
+<h2 id="Proxy（代理）的设置"><a href="#Proxy（代理）的设置" class="headerlink" title="Proxy（代理）的设置"></a>Proxy（代理）的设置</h2><p>urllib2 默认会使用环境变量 http_proxy 来设置 HTTP Proxy。假如一个网站它会检测某一段时间某个IP 的访问次数，如果访问次数过多，它会禁止你的访问。所以你可以设置一些代理服务器来帮助你做工作，每隔一段时间换一个代理</p>
+<h3 id="创建一个代理处理器ProxyHandler"><a href="#创建一个代理处理器ProxyHandler" class="headerlink" title="创建一个代理处理器ProxyHandler"></a>创建一个代理处理器ProxyHandler</h3><p><code>proxy_support = urllib.request.ProxyHandler()，ProxyHandler是一个类，其参数是一个字典：{ &#39;类型&#39;:&#39;代理ip:端口号&#39;}</code></p>
+<h3 id="定制、创建一个opener"><a href="#定制、创建一个opener" class="headerlink" title="定制、创建一个opener"></a>定制、创建一个opener</h3><p><code>opener = urllib.request.build_opener(proxy_support)</code></p>
+<h3 id="使用opener"><a href="#使用opener" class="headerlink" title="使用opener"></a>使用opener</h3><p><code>urllib.request.install_opener(opener)
+opener.open(url)</code></p>
+<p>从代理ip列表中随机使用某ip去访问URL的例子:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import urllib.request</span><br><span class="line">import random</span><br><span class="line"></span><br><span class="line">url = &apos;http://www.whatismyip.com.tw&apos;</span><br><span class="line">iplist = [&apos;115.32.41.100:80&apos;,&apos;58.30.231.36:80&apos;,&apos;123.56.90.175:3128&apos;]</span><br><span class="line"></span><br><span class="line">proxy_support = urllib.request.ProxyHandler(&#123;&apos;http&apos;:random.choice(iplist)&#125;)</span><br><span class="line">opener = urllib.request.build_opener(proxy_support)</span><br><span class="line">opener.addheaders = [(&apos;User-Agent&apos;,&apos;Test_Proxy_Python3.5_maminyao&apos;)]</span><br><span class="line">urllib.request.install_opener(opener)</span><br><span class="line">response = urllib.request.urlopen(url)</span><br><span class="line">html = response.read().decode(&apos;utf-8&apos;)</span><br><span class="line"></span><br><span class="line">print(html)</span><br></pre></td></tr></table></figure></p>
+<h2 id="Timeout-设置"><a href="#Timeout-设置" class="headerlink" title="Timeout 设置"></a>Timeout 设置</h2><p>timeout的设置，可以设置等待多久超时，为了解决一些网站实在响应过慢而造成的影响。<br><code>import urllib2
+response = urllib2.urlopen(&#39;http://www.baidu.com&#39;, timeout=10)</code></p>
+
       
     </div>
     
@@ -432,7 +481,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/urllib/" rel="tag"># -urllib</a>
+            <a href="/tags/urllib/" rel="tag"># urllib</a>
           
         </div>
       
@@ -505,8 +554,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -536,7 +594,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -547,7 +605,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -572,6 +630,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#urllib库的使用"><span class="nav-number">1.</span> <span class="nav-text">urllib库的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#扒一个网页"><span class="nav-number">1.1.</span> <span class="nav-text">扒一个网页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分析扒网页的方法"><span class="nav-number">1.2.</span> <span class="nav-text">分析扒网页的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构造Requset"><span class="nav-number">1.3.</span> <span class="nav-text">构造Requset</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#POST和GET数据传送"><span class="nav-number">1.4.</span> <span class="nav-text">POST和GET数据传送</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#POST"><span class="nav-number">1.4.1.</span> <span class="nav-text">POST</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GET方式"><span class="nav-number">1.4.2.</span> <span class="nav-text">GET方式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#urllib库的扩展"><span class="nav-number">2.</span> <span class="nav-text">urllib库的扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#设置Headers"><span class="nav-number">2.1.</span> <span class="nav-text">设置Headers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Proxy（代理）的设置"><span class="nav-number">2.2.</span> <span class="nav-text">Proxy（代理）的设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建一个代理处理器ProxyHandler"><span class="nav-number">2.2.1.</span> <span class="nav-text">创建一个代理处理器ProxyHandler</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定制、创建一个opener"><span class="nav-number">2.2.2.</span> <span class="nav-text">定制、创建一个opener</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用opener"><span class="nav-number">2.2.3.</span> <span class="nav-text">使用opener</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Timeout-设置"><span class="nav-number">2.3.</span> <span class="nav-text">Timeout 设置</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
