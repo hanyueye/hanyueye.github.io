@@ -83,11 +83,11 @@
 <meta name="keywords" content="-python 语法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python 数据类型">
-<meta property="og:url" content="https://hanyueye.github.io/2017/12/04/python2/index.html">
+<meta property="og:url" content="https://hanyueye.github.io/2017/12/04/Python-shujuleixing/index.html">
 <meta property="og:site_name" content="如果还有梦就追">
 <meta property="og:description" content="数据类型在Python中，能够直接处理的数据类型有以下几种： 基本数据类型整数Python可以处理任意大小的整数，当然包括负整数，在程序中的表示方法和数学上的写法一模一样，例如：1，100，-8080，0，等等。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-04T13:21:41.237Z">
+<meta property="og:updated_time" content="2017-12-04T13:47:46.895Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python 数据类型">
 <meta name="twitter:description" content="数据类型在Python中，能够直接处理的数据类型有以下几种： 基本数据类型整数Python可以处理任意大小的整数，当然包括负整数，在程序中的表示方法和数学上的写法一模一样，例如：1，100，-8080，0，等等。">
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="https://hanyueye.github.io/2017/12/04/python2/"/>
+  <link rel="canonical" href="https://hanyueye.github.io/2017/12/04/Python-shujuleixing/"/>
 
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hanyueye.github.io/2017/12/04/python2/">
+    <link itemprop="mainEntityOfPage" href="https://hanyueye.github.io/2017/12/04/Python-shujuleixing/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="王聪">
@@ -394,8 +394,7 @@
 <p>布尔值可以用<code>and、or</code>和<code>not</code>运算。</p>
 <h3 id="空值"><a href="#空值" class="headerlink" title="空值"></a>空值</h3><p>空值是Python里一个特殊的值，用None表示。None不能理解为0，因为0是有意义的，而None是一个特殊的空值。</p>
 <h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>变量名必须是大小写英文、数字和_的组合，且不能用数字开头</p>
-<p>##数据类型进阶</p>
-<h3 id="列表（list）"><a href="#列表（list）" class="headerlink" title="列表（list）"></a>列表（list）</h3><p>Python内置的一种数据类型是列表：list。list是一种有序的集合，可以随时添加和删除其中的元素。<br>声明list：<br><code>list=[&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]</code><br>用索引来访问list中每一个位置的元素，记得索引是从0开始的例如<code>list   [0]</code><br>如果要取最后一个元素，除了计算索引位置外，还可以用-1做索引，直接获取最后一个元素：<code>list[-1]</code><br>list是一个可变的有序表，所以，可以往list中追加元素到末尾：<br><code>list.append([指定位置]&#39;aaa&#39;)</code><br>要删除list的元素，用pop()方法：<br><code>list.pop([指定位置默认为最后])</code><br>要把某个元素替换成别的元素，可以直接赋值给对应的索引位置,list里面的元素的数据类型也可以不同。<br>list元素也可以是另一个list,例如：<br><code>s = [&#39;python&#39;, &#39;java&#39;, [&#39;asp&#39;, &#39;php&#39;], &#39;scheme&#39;]</code></p>
+<h2 id="数据类型进阶"><a href="#数据类型进阶" class="headerlink" title="数据类型进阶"></a>数据类型进阶</h2><h3 id="列表（list）"><a href="#列表（list）" class="headerlink" title="列表（list）"></a>列表（list）</h3><p>Python内置的一种数据类型是列表：list。list是一种有序的集合，可以随时添加和删除其中的元素。<br>声明list：<br><code>list=[&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]</code><br>用索引来访问list中每一个位置的元素，记得索引是从0开始的例如<code>list   [0]</code><br>如果要取最后一个元素，除了计算索引位置外，还可以用-1做索引，直接获取最后一个元素：<code>list[-1]</code><br>list是一个可变的有序表，所以，可以往list中追加元素到末尾：<br><code>list.append([指定位置]&#39;aaa&#39;)</code><br>要删除list的元素，用pop()方法：<br><code>list.pop([指定位置默认为最后])</code><br>要把某个元素替换成别的元素，可以直接赋值给对应的索引位置,list里面的元素的数据类型也可以不同。<br>list元素也可以是另一个list,例如：<br><code>s = [&#39;python&#39;, &#39;java&#39;, [&#39;asp&#39;, &#39;php&#39;], &#39;scheme&#39;]</code></p>
 <h3 id="元祖（tuple）"><a href="#元祖（tuple）" class="headerlink" title="元祖（tuple）"></a>元祖（tuple）</h3><p>另一种有序列表叫元组：tuple。tuple和list非常类似，但是tuple一旦初始化就不能修改<br>声明元祖<code>t=（1，2）</code><br>只有1个元素的tuple定义时必须加一个逗号,，来消除歧义：<br><code>t=(1,)</code><br>最后来看一个“可变的”tuple：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">t = (&apos;a&apos;, &apos;b&apos;, [&apos;A&apos;, &apos;B&apos;])</span><br><span class="line">t[2][0] = &apos;X&apos;</span><br><span class="line">t[2][0] = &apos;X&apos;</span><br></pre></td></tr></table></figure></p>
 <h3 id="字典（dict）"><a href="#字典（dict）" class="headerlink" title="字典（dict）"></a>字典（dict）</h3><p>Python内置了字典：dict的支持，dict全称dictionary，在其他语言中也称为map，使用键-值（<code>key-value</code>）存储，具有极快的查找速度。<br>声明dict <code>d = {&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 3}</code></p>
 <h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><p>set和dict类似，也是一组key的集合，但不存储value。由于key不能重复，所以，在set中，没有重复的key。<br>要创建一个set，需要提供一个list作为输入集合:<br>声明 set <code>s = set([1,2,3])</code><br>set可以看成数学意义上的无序和无重复元素的集合，因此，两个set可以做数学意义上的交集、并集等操作：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">print s1 = set([1, 2, 3])</span><br><span class="line">print s2 = set([2, 3, 4])</span><br><span class="line">print s1 &amp; s2</span><br><span class="line">set([2, 3])</span><br><span class="line">print s1 | s2</span><br><span class="line">set([1, 2, 3, 4])</span><br></pre></td></tr></table></figure></p>
@@ -458,8 +457,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/04/Python/" rel="next" title="Python 安装">
-                <i class="fa fa-chevron-left"></i> Python 安装
+              <a href="/2017/12/04/Python-zhengze/" rel="next" title="Python re">
+                <i class="fa fa-chevron-left"></i> Python re
               </a>
             
           </div>
@@ -467,6 +466,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/04/Python-anzhuang/" rel="prev" title="Python 安装">
+                Python 安装 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -547,7 +550,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -569,7 +572,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -604,7 +607,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据类型"><span class="nav-number">1.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本数据类型"><span class="nav-number">1.1.</span> <span class="nav-text">基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#整数"><span class="nav-number">1.1.1.</span> <span class="nav-text">整数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮点数"><span class="nav-number">1.1.2.</span> <span class="nav-text">浮点数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串"><span class="nav-number">1.1.3.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#布尔值"><span class="nav-number">1.1.4.</span> <span class="nav-text">布尔值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#空值"><span class="nav-number">1.1.5.</span> <span class="nav-text">空值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量"><span class="nav-number">1.1.6.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表（list）"><span class="nav-number">1.1.7.</span> <span class="nav-text">列表（list）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#元祖（tuple）"><span class="nav-number">1.1.8.</span> <span class="nav-text">元祖（tuple）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字典（dict）"><span class="nav-number">1.1.9.</span> <span class="nav-text">字典（dict）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#set"><span class="nav-number">1.1.10.</span> <span class="nav-text">set</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据类型"><span class="nav-number">1.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本数据类型"><span class="nav-number">1.1.</span> <span class="nav-text">基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#整数"><span class="nav-number">1.1.1.</span> <span class="nav-text">整数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮点数"><span class="nav-number">1.1.2.</span> <span class="nav-text">浮点数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串"><span class="nav-number">1.1.3.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#布尔值"><span class="nav-number">1.1.4.</span> <span class="nav-text">布尔值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#空值"><span class="nav-number">1.1.5.</span> <span class="nav-text">空值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量"><span class="nav-number">1.1.6.</span> <span class="nav-text">变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型进阶"><span class="nav-number">1.2.</span> <span class="nav-text">数据类型进阶</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#列表（list）"><span class="nav-number">1.2.1.</span> <span class="nav-text">列表（list）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#元祖（tuple）"><span class="nav-number">1.2.2.</span> <span class="nav-text">元祖（tuple）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字典（dict）"><span class="nav-number">1.2.3.</span> <span class="nav-text">字典（dict）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#set"><span class="nav-number">1.2.4.</span> <span class="nav-text">set</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
