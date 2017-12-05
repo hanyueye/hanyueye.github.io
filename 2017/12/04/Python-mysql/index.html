@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="bs4," />
+  <meta name="keywords" content="pymysql," />
 
 
 
@@ -79,21 +79,21 @@
 
 
 
-<meta name="description" content="Beautiful Soup的简介简单来说，BeautifulSoup是python的一个库，最主要的功能是从网页抓取数据。官方解释如下：  Beautiful Soup提供一些简单的、python式的函数用来处理导航、搜索、修改分析树等功能。它是一个工具箱，通过解析文档为用户提供需要抓取的数据，因为简单，所以不需要多">
-<meta name="keywords" content="bs4">
+<meta name="description" content="Python操作MySQL数据库什么是pymysqlPyMySQL 是 Python 中用于连接 MySQL 服务器的一个库，它遵循 Python 数据库 API 规范 V2.0，并包含了 pure-Python MySQL 客户端库。">
+<meta name="keywords" content="pymysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python beautifulsoup">
-<meta property="og:url" content="https://hanyueye.com/2017/12/04/Python-parser-bs4/index.html">
+<meta property="og:title" content="Python Mysql">
+<meta property="og:url" content="https://hanyueye.com/2017/12/04/Python-mysql/index.html">
 <meta property="og:site_name" content="如果还有梦就追">
-<meta property="og:description" content="Beautiful Soup的简介简单来说，BeautifulSoup是python的一个库，最主要的功能是从网页抓取数据。官方解释如下：  Beautiful Soup提供一些简单的、python式的函数用来处理导航、搜索、修改分析树等功能。它是一个工具箱，通过解析文档为用户提供需要抓取的数据，因为简单，所以不需要多少代码就可以写出一个完整的应用程序。">
+<meta property="og:description" content="Python操作MySQL数据库什么是pymysqlPyMySQL 是 Python 中用于连接 MySQL 服务器的一个库，它遵循 Python 数据库 API 规范 V2.0，并包含了 pure-Python MySQL 客户端库。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://i4.bvimg.com/621817/b51e6938680e8a88.png">
 <meta property="og:image" content="http://i4.bvimg.com/621817/4941a46550e5346a.png">
-<meta property="og:image" content="http://i4.bvimg.com/621817/734b46fd42ad2a70.png">
-<meta property="og:updated_time" content="2017-12-05T03:45:34.709Z">
+<meta property="og:image" content="http://i1.bvimg.com/621817/5ea8caf8f51760c9.png">
+<meta property="og:updated_time" content="2017-12-05T07:57:53.071Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python beautifulsoup">
-<meta name="twitter:description" content="Beautiful Soup的简介简单来说，BeautifulSoup是python的一个库，最主要的功能是从网页抓取数据。官方解释如下：  Beautiful Soup提供一些简单的、python式的函数用来处理导航、搜索、修改分析树等功能。它是一个工具箱，通过解析文档为用户提供需要抓取的数据，因为简单，所以不需要多少代码就可以写出一个完整的应用程序。">
+<meta name="twitter:title" content="Python Mysql">
+<meta name="twitter:description" content="Python操作MySQL数据库什么是pymysqlPyMySQL 是 Python 中用于连接 MySQL 服务器的一个库，它遵循 Python 数据库 API 规范 V2.0，并包含了 pure-Python MySQL 客户端库。">
 <meta name="twitter:image" content="http://i4.bvimg.com/621817/b51e6938680e8a88.png">
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://hanyueye.com/2017/12/04/Python-parser-bs4/"/>
+  <link rel="canonical" href="https://hanyueye.com/2017/12/04/Python-mysql/"/>
 
 
 
 
 
-  <title>Python beautifulsoup | 如果还有梦就追</title>
+  <title>Python Mysql | 如果还有梦就追</title>
   
 
 
@@ -301,7 +301,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hanyueye.com/2017/12/04/Python-parser-bs4/">
+    <link itemprop="mainEntityOfPage" href="https://hanyueye.com/2017/12/04/Python-mysql/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="王聪">
@@ -318,7 +318,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python beautifulsoup</h1>
+          <h1 class="post-title" itemprop="name headline">Python Mysql</h1>
         
 
         <div class="post-meta">
@@ -360,17 +360,6 @@
 
                 
                 
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/爬虫/" itemprop="url" rel="index">
-                    <span itemprop="name">爬虫</span>
-                  </a>
-                </span>
-
-                
-                
               
             </span>
           
@@ -401,47 +390,28 @@
       
 
       
-        <h1 id="Beautiful-Soup的简介"><a href="#Beautiful-Soup的简介" class="headerlink" title="Beautiful Soup的简介"></a>Beautiful Soup的简介</h1><p>简单来说，<code>BeautifulSoup</code>是python的一个库，最主要的功能是从网页抓取数据。官方解释如下：</p>
-<blockquote>
-<p>Beautiful Soup提供一些简单的、python式的函数用来处理导航、搜索、修改分析树等功能。它是一个工具箱，通过解析文档为用户提供需要抓取的数据，因为简单，所以不需要多少代码就可以写出一个完整的应用程序。<br><a id="more"></a><br>Beautiful Soup自动将输入文档转换为Unicode编码，输出文档转换为utf-8编码。你不需要考虑编码方式，除非文档没有指定一个编码方式，这时，Beautiful Soup就不能自动识别编码方式了。然后，你仅仅需要说明一下原始编码方式就可以了。<br>Beautiful Soup已成为和lxml、html6lib一样出色的python解释器，为用户灵活地提供不同的解析策略或强劲的速度。</p>
-</blockquote>
-<h1 id="Beautiful-Soup-安装"><a href="#Beautiful-Soup-安装" class="headerlink" title="Beautiful Soup 安装"></a>Beautiful Soup 安装</h1><p><code>Beautiful Soup 3</code> 目前已经停止开发，推荐在现在的项目中使用<code>Beautiful Soup 4</code>，不过它已经被移植到BS4了，也就是说导入时我们需要 <code>import bs4</code> 。<br>pycharm 有非常强大的python库，所有常用的库都可以通过pycharm的<code>Default Settings</code>来下载,如图：</p>
-<h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p><img src="http://i4.bvimg.com/621817/b51e6938680e8a88.png" alt="Aaron Swartz"></p>
-<h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><p><img src="http://i4.bvimg.com/621817/4941a46550e5346a.png" alt="Aaron Swartz"></p>
-<h2 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h2><p><img src="http://i4.bvimg.com/621817/734b46fd42ad2a70.png" alt="Aaron Swartz"></p>
-<p>这样就安装完成了</p>
-<h1 id="开启Beautiful-Soup-之旅"><a href="#开启Beautiful-Soup-之旅" class="headerlink" title="开启Beautiful Soup 之旅"></a>开启Beautiful Soup 之旅</h1><p>在这里先分享官方文档链接，不过内容是有些多，也不够条理，在此本文章做一下整理方便大家参考</p>
-<blockquote>
-<p><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html" target="_blank" rel="noopener">https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html</a></p>
-</blockquote>
-<h1 id="创建-Beautiful-Soup-对象"><a href="#创建-Beautiful-Soup-对象" class="headerlink" title="创建 Beautiful Soup 对象"></a>创建 Beautiful Soup 对象</h1><h2 id="首先必须要导入-bs4-库"><a href="#首先必须要导入-bs4-库" class="headerlink" title="首先必须要导入 bs4 库"></a>首先必须要导入 bs4 库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from bs4 import BeautifulSoup</span><br></pre></td></tr></table></figure>
-<p>我们创建一个字符串，后面的例子我们便会用它来演示:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">html = &quot;&quot;&quot;</span><br><span class="line">&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&apos;s story&lt;/title&gt;&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p class=&quot;title&quot; name=&quot;dromouse&quot;&gt;&lt;b&gt;The Dormouse&apos;s story&lt;/b&gt;&lt;/p&gt;</span><br><span class="line">&lt;p class=&quot;story&quot;&gt;Once upon a time there were three little sisters; and their names were</span><br><span class="line">&lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;&lt;!-- Elsie --&gt;&lt;/a&gt;,</span><br><span class="line">&lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; and</span><br><span class="line">&lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;;</span><br><span class="line">and they lived at the bottom of a well.&lt;/p&gt;</span><br><span class="line">&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span><br><span class="line">&quot;&quot;&quot;</span><br></pre></td></tr></table></figure></p>
-<h2 id="创建-beautifulsoup-对象"><a href="#创建-beautifulsoup-对象" class="headerlink" title="创建 beautifulsoup 对象"></a>创建 beautifulsoup 对象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">soup = BeautifulSoup(html)</span><br><span class="line">print soup.prettify()</span><br></pre></td></tr></table></figure>
-<h1 id="四大对象种类"><a href="#四大对象种类" class="headerlink" title="四大对象种类"></a>四大对象种类</h1><p>Beautiful Soup将复杂HTML文档转换成一个复杂的树形结构,每个节点都是Python对象,所有对象可以归纳为4种:</p>
+        <h1 id="Python操作MySQL数据库"><a href="#Python操作MySQL数据库" class="headerlink" title="Python操作MySQL数据库"></a>Python操作MySQL数据库</h1><h2 id="什么是pymysql"><a href="#什么是pymysql" class="headerlink" title="什么是pymysql"></a>什么是pymysql</h2><p>PyMySQL 是 Python 中用于连接 MySQL 服务器的一个库，它遵循 Python 数据库 API 规范 V2.0，并包含了 pure-Python MySQL 客户端库。<br><a id="more"></a></p>
+<h2 id="安装-pymysql"><a href="#安装-pymysql" class="headerlink" title="安装 pymysql"></a>安装 pymysql</h2><h3 id="pip-安装"><a href="#pip-安装" class="headerlink" title="pip 安装"></a>pip 安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install PyMysql</span><br></pre></td></tr></table></figure>
+<h3 id="pycharm-安装"><a href="#pycharm-安装" class="headerlink" title="pycharm 安装"></a>pycharm 安装</h3><p>第一步:<br><img src="http://i4.bvimg.com/621817/b51e6938680e8a88.png" alt="Aaron Swartz"></p>
+<p>第二步：</p>
+<p><img src="http://i4.bvimg.com/621817/4941a46550e5346a.png" alt="Aaron Swartz"></p>
+<p>第三步：</p>
+<p><img src="http://i1.bvimg.com/621817/5ea8caf8f51760c9.png" alt="Aaron Swartz"></p>
+<h2 id="使用-PyMySQL"><a href="#使用-PyMySQL" class="headerlink" title="使用 PyMySQL"></a>使用 PyMySQL</h2><h3 id="导包"><a href="#导包" class="headerlink" title="导包"></a>导包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import pymysql</span><br></pre></td></tr></table></figure>
+<h3 id="打开数据库链接"><a href="#打开数据库链接" class="headerlink" title="打开数据库链接"></a>打开数据库链接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conn = pymysql.connect(host=&quot;localhost&quot;, port=3306, user=&quot;root&quot;,</span><br><span class="line"> passwd=&quot;root&quot;, db=&quot;pysql&quot;,charset=&quot;utf8&quot;)</span><br></pre></td></tr></table></figure>
 <ul>
-<li>Tag</li>
-<li>NavigableString</li>
-<li>BeautifulSoup</li>
-<li>Comment</li>
+<li>host: 连接的数据库服务器主机名，默认为本地主机(localhost)。</li>
+<li>user:数据库登陆名.默认是当前用户.</li>
+<li>passwd:数据库登陆的秘密.默认为空.</li>
+<li>db:要使用的数据库名.没有默认值.</li>
+<li>port:MySQL服务使用的TCP端口.默认是<code>3306</code>.</li>
+<li>conn连接有两个重要的方法<code>commit</code>【提交新增和修改】,<code>rollback</code>【撤销新增或修改】</li>
 </ul>
-<h1 id="搜索文档树"><a href="#搜索文档树" class="headerlink" title="搜索文档树"></a>搜索文档树</h1><h2 id="find-all-name-attrs-recursive-text-kwargs"><a href="#find-all-name-attrs-recursive-text-kwargs" class="headerlink" title="find_all( name , attrs , recursive , text , **kwargs )"></a>find_all( name , attrs , recursive , text , **kwargs )</h2><p><code>find_all()</code> 方法搜索当前<code>tag</code>的所有tag子节点,并判断是否符合过滤器的条件</p>
-<h3 id="name-参数"><a href="#name-参数" class="headerlink" title="name 参数"></a>name 参数</h3><p>name 参数可以查找所有名字为 <code>name</code> 的<code>tag</code>,字符串对象会被自动忽略掉</p>
-<h4 id="传字符串："><a href="#传字符串：" class="headerlink" title="传字符串："></a>传字符串：</h4><p>最简单的过滤器是字符串.在搜索方法中传入一个字符串参数,Beautiful Soup会查找与字符串完整匹配的内容,下面的例子用于查找文档中所有的<code>&lt;b&gt;</code>标签<br><code>soup.find_all(&#39;b&#39;)</code></p>
-<h4 id="传正则表达式"><a href="#传正则表达式" class="headerlink" title="传正则表达式"></a>传正则表达式</h4><p>如果传入正则表达式作为参数,Beautiful Soup会通过正则表达式的 <code>match()</code> 来匹配内容.下面例子中找出所有以b开头的标签,这表示<code>&lt;body&gt;</code>和<code>&lt;b&gt;</code>标签都应该被找到<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line">for tag in soup.find_all(re.compile(&quot;^b&quot;)):</span><br><span class="line">    print(tag.name)</span><br><span class="line"># body</span><br><span class="line"># b</span><br></pre></td></tr></table></figure></p>
-<h4 id="传列表"><a href="#传列表" class="headerlink" title="传列表"></a>传列表</h4><p>如果传入列表参数,<code>Beautiful</code> <code>Soup</code>会将与列表中任一元素匹配的内容返回.下面代码找到文档中所有<a>标签和<code>&lt;b&gt;</code>标签<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">soup.find_all([&quot;a&quot;, &quot;b&quot;])</span><br><span class="line"># [&lt;b&gt;The Dormouse&apos;s story&lt;/b&gt;,</span><br><span class="line">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span><br><span class="line">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span><br><span class="line">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span><br></pre></td></tr></table></figure></a></p>
-<h4 id="传-True"><a href="#传-True" class="headerlink" title="传 True"></a>传 True</h4><p>True 可以匹配任何值,下面代码查找到所有的tag,但是不会返回字符串节点<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">for tag in soup.find_all(True):</span><br><span class="line">    print(tag.name)</span><br><span class="line"># html</span><br><span class="line"># head</span><br><span class="line"># title</span><br><span class="line"># body</span><br><span class="line"># p</span><br><span class="line"># b</span><br><span class="line"># p</span><br><span class="line"># a</span><br><span class="line"># a</span><br></pre></td></tr></table></figure></p>
-<h3 id="keyword-参数"><a href="#keyword-参数" class="headerlink" title="keyword 参数"></a>keyword 参数</h3><p>注意：如果一个指定名字的参数不是搜索内置的参数名,搜索时会把该参数当作指定名字tag的属性来搜索,如果包含一个名字为 <code>id</code> 的参数,Beautiful Soup会搜索每个tag的”<code>id</code>”属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">soup.find_all(id=&apos;link2&apos;)</span><br><span class="line"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;]</span><br></pre></td></tr></table></figure></p>
-<p>如果传入 <code>href</code> 参数,<code>Beautiful Soup</code>会搜索每个tag的<code>href</code>属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">soup.find_all(href=re.compile(&quot;elsie&quot;))</span><br><span class="line"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;]</span><br></pre></td></tr></table></figure></p>
-<p>在这里我们想用 class 过滤，不过 <code>class</code> 是 python 的关键词，这怎么办？加个下划线就可以<br><code>soup.find_all(&quot;a&quot;, class_=&quot;sister&quot;)</code></p>
-<h3 id="text-参数"><a href="#text-参数" class="headerlink" title="text 参数"></a>text 参数</h3><p>通过 text 参数可以搜搜文档中的字符串内容.与 name 参数的可选值一样, text 参数接受 <code>字符串</code> , <code>正则表达式</code> , <code>列表</code>, <code>True</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">soup.find_all(text=&quot;Elsie&quot;)</span><br><span class="line"># [u&apos;Elsie&apos;]</span><br><span class="line"></span><br><span class="line">soup.find_all(text=[&quot;Tillie&quot;, &quot;Elsie&quot;, &quot;Lacie&quot;])</span><br><span class="line"># [u&apos;Elsie&apos;, u&apos;Lacie&apos;, u&apos;Tillie&apos;]</span><br><span class="line"></span><br><span class="line">soup.find_all(text=re.compile(&quot;Dormouse&quot;))</span><br><span class="line">#[u&quot;The Dormouse&apos;s story&quot;, u&quot;The Dormouse&apos;s story&quot;]</span><br></pre></td></tr></table></figure></p>
-<h3 id="recursive-参数"><a href="#recursive-参数" class="headerlink" title="recursive 参数"></a>recursive 参数</h3><p>调用tag的 <code>find_all()</code> 方法时,Beautiful Soup会检索当前tag的所有子孙节点,如果只想搜索tag的直接子节点,可以使用参数 <code>recursive=False</code></p>
-<h2 id="find-name-attrs-recursive-text-kwargs"><a href="#find-name-attrs-recursive-text-kwargs" class="headerlink" title="find( name , attrs , recursive , text , **kwargs )"></a>find( name , attrs , recursive , text , **kwargs )</h2><p>它与 <code>find_all()</code> 方法唯一的区别是 <code>find_all()</code> 方法的返回结果是值包含一个元素的列表,而 <code>find()</code> 方法直接返回结果</p>
-<h1 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h1><p>我们在写 CSS 时，标签名不加任何修饰，类名前加点，<code>id</code>名前加 <code>#</code>，在这里我们也可以利用类似的方法来筛选元素，用到的方法是 <code>soup.select()</code>，返回类型是 <code>list</code></p>
-<h2 id="通过标签名查找"><a href="#通过标签名查找" class="headerlink" title="通过标签名查找"></a>通过标签名查找</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">print soup.select(&apos;title&apos;)</span><br><span class="line">#[&lt;title&gt;The Dormouse&apos;s story&lt;/title&gt;]</span><br><span class="line"></span><br><span class="line">print soup.select(&apos;a&apos;)</span><br><span class="line">#[&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;]</span><br><span class="line"></span><br><span class="line">print soup.select(&apos;b&apos;)</span><br><span class="line">#[&lt;b&gt;The Dormouse&apos;s story&lt;/b&gt;]</span><br></pre></td></tr></table></figure>
-<h2 id="通过类名查找-加"><a href="#通过类名查找-加" class="headerlink" title="通过类名查找 加."></a>通过类名查找 加.</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print soup.select(&apos;.sister&apos;)</span><br><span class="line">#[&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="通过-id-名查找-加"><a href="#通过-id-名查找-加" class="headerlink" title="通过 id 名查找 加"></a>通过 id 名查找 加</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print soup.select(&apos;#link1&apos;)</span><br><span class="line">#[&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="组合查找"><a href="#组合查找" class="headerlink" title="组合查找"></a>组合查找</h2><p>组合查找即和写 class 文件时，标签名与类名、id名进行的组合原理是一样的，例如查找 p 标签中，id 等于 link1的内容，二者需要用空格分开<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print soup.select(&apos;p #link1&apos;)</span><br><span class="line">#[&lt;p class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;</span><br></pre></td></tr></table></figure></p>
-<h2 id="属性查找"><a href="#属性查找" class="headerlink" title="属性查找"></a>属性查找</h2><p>查找时还可以加入属性元素，属性需要用中括号括起来，注意属性和标签属于同一节点，所以中间不能加空格，否则会无法匹配到。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">print soup.select(&apos;a[href=&quot;http://example.com/elsie&quot;]&apos;)</span><br><span class="line">#[&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;</span><br><span class="line"></span><br><span class="line">print soup.select(&apos;p a[href=&quot;http://example.com/elsie&quot;]&apos;)</span><br><span class="line">#[&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="执行数据库操作"><a href="#执行数据库操作" class="headerlink" title="执行数据库操作"></a>执行数据库操作</h3><h4 id="获取游标"><a href="#获取游标" class="headerlink" title="获取游标"></a>获取游标</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> # 使用cursor()方法获取操作游标</span><br><span class="line">cursor = conn.cursor()</span><br></pre></td></tr></table></figure>
+<h4 id="写SQL语句"><a href="#写SQL语句" class="headerlink" title="写SQL语句"></a>写SQL语句</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sql=&quot;&quot;</span><br></pre></td></tr></table></figure>
+<h4 id="执行sql语句"><a href="#执行sql语句" class="headerlink" title="执行sql语句"></a>执行sql语句</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cursor.execute(sql)</span><br></pre></td></tr></table></figure>
+<h4 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conn.commit()</span><br></pre></td></tr></table></figure>
+<h4 id="关闭数据库链接"><a href="#关闭数据库链接" class="headerlink" title="关闭数据库链接"></a>关闭数据库链接</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -488,7 +458,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/bs4/" rel="tag"># bs4</a>
+            <a href="/tags/pymysql/" rel="tag"># pymysql</a>
           
         </div>
       
@@ -501,8 +471,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/04/Python-mysql/" rel="next" title="Python Mysql">
-                <i class="fa fa-chevron-left"></i> Python Mysql
+              <a href="/2017/12/04/Java/" rel="next" title="java">
+                <i class="fa fa-chevron-left"></i> java
               </a>
             
           </div>
@@ -511,8 +481,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/04/Python-shujuleixing/" rel="prev" title="Python 数据类型">
-                Python 数据类型 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/04/Python-parser-bs4/" rel="prev" title="Python beautifulsoup">
+                Python beautifulsoup <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -651,7 +621,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Beautiful-Soup的简介"><span class="nav-number">1.</span> <span class="nav-text">Beautiful Soup的简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Beautiful-Soup-安装"><span class="nav-number">2.</span> <span class="nav-text">Beautiful Soup 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一步"><span class="nav-number">2.1.</span> <span class="nav-text">第一步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二步"><span class="nav-number">2.2.</span> <span class="nav-text">第二步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三步"><span class="nav-number">2.3.</span> <span class="nav-text">第三步</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开启Beautiful-Soup-之旅"><span class="nav-number">3.</span> <span class="nav-text">开启Beautiful Soup 之旅</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建-Beautiful-Soup-对象"><span class="nav-number">4.</span> <span class="nav-text">创建 Beautiful Soup 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#首先必须要导入-bs4-库"><span class="nav-number">4.1.</span> <span class="nav-text">首先必须要导入 bs4 库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建-beautifulsoup-对象"><span class="nav-number">4.2.</span> <span class="nav-text">创建 beautifulsoup 对象</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四大对象种类"><span class="nav-number">5.</span> <span class="nav-text">四大对象种类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搜索文档树"><span class="nav-number">6.</span> <span class="nav-text">搜索文档树</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#find-all-name-attrs-recursive-text-kwargs"><span class="nav-number">6.1.</span> <span class="nav-text">find_all( name , attrs , recursive , text , **kwargs )</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#name-参数"><span class="nav-number">6.1.1.</span> <span class="nav-text">name 参数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#传字符串："><span class="nav-number">6.1.1.1.</span> <span class="nav-text">传字符串：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传正则表达式"><span class="nav-number">6.1.1.2.</span> <span class="nav-text">传正则表达式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传列表"><span class="nav-number">6.1.1.3.</span> <span class="nav-text">传列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传-True"><span class="nav-number">6.1.1.4.</span> <span class="nav-text">传 True</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#keyword-参数"><span class="nav-number">6.1.2.</span> <span class="nav-text">keyword 参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#text-参数"><span class="nav-number">6.1.3.</span> <span class="nav-text">text 参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#recursive-参数"><span class="nav-number">6.1.4.</span> <span class="nav-text">recursive 参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find-name-attrs-recursive-text-kwargs"><span class="nav-number">6.2.</span> <span class="nav-text">find( name , attrs , recursive , text , **kwargs )</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS选择器"><span class="nav-number">7.</span> <span class="nav-text">CSS选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#通过标签名查找"><span class="nav-number">7.1.</span> <span class="nav-text">通过标签名查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过类名查找-加"><span class="nav-number">7.2.</span> <span class="nav-text">通过类名查找 加.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过-id-名查找-加"><span class="nav-number">7.3.</span> <span class="nav-text">通过 id 名查找 加</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组合查找"><span class="nav-number">7.4.</span> <span class="nav-text">组合查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性查找"><span class="nav-number">7.5.</span> <span class="nav-text">属性查找</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python操作MySQL数据库"><span class="nav-number">1.</span> <span class="nav-text">Python操作MySQL数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是pymysql"><span class="nav-number">1.1.</span> <span class="nav-text">什么是pymysql</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-pymysql"><span class="nav-number">1.2.</span> <span class="nav-text">安装 pymysql</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pip-安装"><span class="nav-number">1.2.1.</span> <span class="nav-text">pip 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pycharm-安装"><span class="nav-number">1.2.2.</span> <span class="nav-text">pycharm 安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-PyMySQL"><span class="nav-number">1.3.</span> <span class="nav-text">使用 PyMySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#导包"><span class="nav-number">1.3.1.</span> <span class="nav-text">导包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打开数据库链接"><span class="nav-number">1.3.2.</span> <span class="nav-text">打开数据库链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行数据库操作"><span class="nav-number">1.3.3.</span> <span class="nav-text">执行数据库操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#获取游标"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">获取游标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#写SQL语句"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">写SQL语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#执行sql语句"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">执行sql语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提交"><span class="nav-number">1.3.3.4.</span> <span class="nav-text">提交</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关闭数据库链接"><span class="nav-number">1.3.3.5.</span> <span class="nav-text">关闭数据库链接</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>

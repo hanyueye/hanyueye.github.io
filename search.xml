@@ -46,6 +46,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Python Mysql]]></title>
+    <url>%2F2017%2F12%2F04%2FPython-mysql%2F</url>
+    <content type="text"><![CDATA[Python操作MySQL数据库什么是pymysqlPyMySQL 是 Python 中用于连接 MySQL 服务器的一个库，它遵循 Python 数据库 API 规范 V2.0，并包含了 pure-Python MySQL 客户端库。 安装 pymysqlpip 安装1pip install PyMysql pycharm 安装第一步: 第二步： 第三步： 使用 PyMySQL导包1import pymysql 打开数据库链接12conn = pymysql.connect(host=&quot;localhost&quot;, port=3306, user=&quot;root&quot;, passwd=&quot;root&quot;, db=&quot;pysql&quot;,charset=&quot;utf8&quot;) host: 连接的数据库服务器主机名，默认为本地主机(localhost)。 user:数据库登陆名.默认是当前用户. passwd:数据库登陆的秘密.默认为空. db:要使用的数据库名.没有默认值. port:MySQL服务使用的TCP端口.默认是3306. conn连接有两个重要的方法commit【提交新增和修改】,rollback【撤销新增或修改】 执行数据库操作获取游标12 # 使用cursor()方法获取操作游标cursor = conn.cursor() 写SQL语句1sql=&quot;&quot; 执行sql语句1cursor.execute(sql) 提交1conn.commit() 关闭数据库链接1conn.close()]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>pymysql</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[java]]></title>
     <url>%2F2017%2F12%2F04%2FJava%2F</url>
     <content type="text"></content>
