@@ -87,13 +87,13 @@
 <meta property="og:site_name" content="如果还有梦就追">
 <meta property="og:description" content="urllib库的使用扒一个网页怎样扒网页呢？其实就是根据URL来获取它的网页信息，虽然我们在浏览器中看到的是一幅幅优美的画面，但是其实是由浏览器解释才呈现出来的，实质它 是一段HTML代码，加 JS、CSS，如果把网页比作一个人，那么HTML便是他的骨架，JS便是他的肌肉，CSS便是它的衣服。所以最重要的部分是存在于HTML中的，下面我 们就写个例子来扒一个网页下来。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://i4.bvimg.com/621817/325ff2d4ef74c909.png">
-<meta property="og:image" content="http://i1.bvimg.com/621817/d196c76e27ce0a6d.png">
-<meta property="og:updated_time" content="2017-12-04T13:24:39.989Z">
+<meta property="og:image" content="https://hanyueye.com/2017/12/04/Python-parser-jinjie/p0hkrowc2.bkt.clouddn.com/201712052007_494.png">
+<meta property="og:image" content="https://hanyueye.com/2017/12/04/Python-parser-jinjie/p0hkrowc2.bkt.clouddn.com/201712052008_994.png">
+<meta property="og:updated_time" content="2017-12-05T12:08:23.579Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Urllib库">
 <meta name="twitter:description" content="urllib库的使用扒一个网页怎样扒网页呢？其实就是根据URL来获取它的网页信息，虽然我们在浏览器中看到的是一幅幅优美的画面，但是其实是由浏览器解释才呈现出来的，实质它 是一段HTML代码，加 JS、CSS，如果把网页比作一个人，那么HTML便是他的骨架，JS便是他的肌肉，CSS便是它的衣服。所以最重要的部分是存在于HTML中的，下面我 们就写个例子来扒一个网页下来。">
-<meta name="twitter:image" content="http://i4.bvimg.com/621817/325ff2d4ef74c909.png">
+<meta name="twitter:image" content="https://hanyueye.com/2017/12/04/Python-parser-jinjie/p0hkrowc2.bkt.clouddn.com/201712052007_494.png">
 
 
 
@@ -401,7 +401,7 @@
 
       
         <h1 id="urllib库的使用"><a href="#urllib库的使用" class="headerlink" title="urllib库的使用"></a>urllib库的使用</h1><h2 id="扒一个网页"><a href="#扒一个网页" class="headerlink" title="扒一个网页"></a>扒一个网页</h2><p>怎样扒网页呢？其实就是根据URL来获取它的网页信息，虽然我们在浏览器中看到的是一幅幅优美的画面，但是其实是由浏览器解释才呈现出来的，实质它 是一段HTML代码，加 JS、CSS，如果把网页比作一个人，那么HTML便是他的骨架，JS便是他的肌肉，CSS便是它的衣服。所以最重要的部分是存在于HTML中的，下面我 们就写个例子来扒一个网页下来。<br><a id="more"></a><br>在pycharm里新建一个.py的文件名字叫firstparser.py<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import urllib2</span><br><span class="line"></span><br><span class="line">response = urllib2.urlopen(&quot;http://www.baidu.com&quot;)</span><br><span class="line">print response.read()</span><br></pre></td></tr></table></figure></p>
-<p>是的你没看错，真正的程序就两行，右键选择 <code>run</code> ，查看运行结果，感受一下:<br><img src="http://i4.bvimg.com/621817/325ff2d4ef74c909.png" alt="Aaron Swartz"><br>看，这个网页的源码已经被我们扒下来了，是不是很酸爽？</p>
+<p>是的你没看错，真正的程序就两行，右键选择 <code>run</code> ，查看运行结果，感受一下:<br><img src="p0hkrowc2.bkt.clouddn.com/201712052007_494.png" alt=""><br>看，这个网页的源码已经被我们扒下来了，是不是很酸爽？</p>
 <h2 id="分析扒网页的方法"><a href="#分析扒网页的方法" class="headerlink" title="分析扒网页的方法"></a>分析扒网页的方法</h2><p>那么我们来分析这两行代码，第一行:</p>
 <p><code>response = urllib2.urlopen(&quot;http://www.baidu.com&quot;)</code></p>
 <p>首先我们调用的是urllib2库里面的<code>urlopen</code>方法，传入一个URL，这个网址是百度首页，协议是HTTP协议，当然你也可以把HTTP换做<code>FTP,FILE,HTTPS</code> 等等，只是代表了一种访问控制协议，<code>urlopen</code>一般接受三个参数，它的参数如下：</p>
@@ -420,7 +420,7 @@
 <p>你可以print geturl，打印输出一下url，发现其实就是原来的url加？然后加编码后的参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://passport.csdn.net/account/login?username=1016903103%40qq.com&amp;password=XXXX</span><br></pre></td></tr></table></figure></p>
 <h1 id="urllib库的扩展"><a href="#urllib库的扩展" class="headerlink" title="urllib库的扩展"></a>urllib库的扩展</h1><h2 id="设置Headers"><a href="#设置Headers" class="headerlink" title="设置Headers"></a>设置Headers</h2><p>有些网站不会同意程序直接用上面的方式进行访问，如果识别有问题，那么站点根本不会响应，所以为了完全模拟浏览器的工作，我们需要设置一些Headers 的属性。</p>
 <p>首先，打开我们的浏览器，调试浏览器F12，我用的是Chrome，打开网络监听经过多次请求之后，网页的骨架和肌肉全了，整个网页的效果也就出来了。</p>
-<p><img src="http://i1.bvimg.com/621817/d196c76e27ce0a6d.png" alt="Aaron Swartz"></p>
+<p><img src="p0hkrowc2.bkt.clouddn.com/201712052008_994.png" alt=""></p>
 <p>拆分这些请求，我们只看一第一个请求，你可以看到，有个<code>Request URL，</code>还有<code>headers</code>，下面便是<code>response</code>，这个头中包含了许许多多是信息，有文件编码啦，压缩方式啦，请求的agent啦等等。</p>
 <p>其中，<code>agent</code>就是请求的身份，如果没有写入请求身份，那么服务器不一定会响应，所以可以在<code>headers</code>中设置<code>agent</code>,例如下面的例子，这个例子只是说明了怎样设置的<code>headers</code>，小伙伴们看一下设置格式就好。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import urllib</span><br><span class="line">import urllib2</span><br><span class="line"></span><br><span class="line">url = &apos;http://www.server.com/login&apos;</span><br><span class="line">user_agent = &apos;Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)&apos;</span><br><span class="line">values = &#123;&apos;username&apos; : &apos;cqc&apos;,</span><br><span class="line">&apos;password&apos; : &apos;XXXX&apos;</span><br><span class="line">&#125;</span><br><span class="line">headers = &#123; &apos;User-Agent&apos; : user_agent &#125;</span><br><span class="line">data = urllib.urlencode(values)</span><br><span class="line">request = urllib2.Request(url, data, headers)</span><br><span class="line">response = urllib2.urlopen(request)</span><br><span class="line">page = response.read()</span><br></pre></td></tr></table></figure></p>
 <p>这样，我们设置了一个headers，在构建request时传入，在请求时，就加入了headers传送，服务器若识别了是浏览器发来的请求，就会得到响应。</p>
