@@ -87,14 +87,14 @@
 <meta property="og:site_name" content="如果还有梦就追">
 <meta property="og:description" content="Python操作MySQL数据库什么是pymysqlPyMySQL 是 Python 中用于连接 MySQL 服务器的一个库，它遵循 Python 数据库 API 规范 V2.0，并包含了 pure-Python MySQL 客户端库。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://hanyueye.com/2017/12/04/Python-mysql/p0hkrowc2.bkt.clouddn.com/201712052002_170.png">
-<meta property="og:image" content="https://hanyueye.com/2017/12/04/Python-mysql/p0hkrowc2.bkt.clouddn.com/201712052002_354.png">
-<meta property="og:image" content="https://hanyueye.com/2017/12/04/Python-mysql/p0hkrowc2.bkt.clouddn.com/201712052003_543.png">
-<meta property="og:updated_time" content="2017-12-05T12:04:16.783Z">
+<meta property="og:image" content="http://p0hkrowc2.bkt.clouddn.com/201712052002_170.png">
+<meta property="og:image" content="http://p0hkrowc2.bkt.clouddn.com/201712052002_354.png">
+<meta property="og:image" content="http://p0hkrowc2.bkt.clouddn.com/201712052003_543.png">
+<meta property="og:updated_time" content="2017-12-05T12:30:03.531Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python Mysql">
 <meta name="twitter:description" content="Python操作MySQL数据库什么是pymysqlPyMySQL 是 Python 中用于连接 MySQL 服务器的一个库，它遵循 Python 数据库 API 规范 V2.0，并包含了 pure-Python MySQL 客户端库。">
-<meta name="twitter:image" content="https://hanyueye.com/2017/12/04/Python-mysql/p0hkrowc2.bkt.clouddn.com/201712052002_170.png">
+<meta name="twitter:image" content="http://p0hkrowc2.bkt.clouddn.com/201712052002_170.png">
 
 
 
@@ -392,11 +392,11 @@
       
         <h1 id="Python操作MySQL数据库"><a href="#Python操作MySQL数据库" class="headerlink" title="Python操作MySQL数据库"></a>Python操作MySQL数据库</h1><h2 id="什么是pymysql"><a href="#什么是pymysql" class="headerlink" title="什么是pymysql"></a>什么是pymysql</h2><p>PyMySQL 是 Python 中用于连接 MySQL 服务器的一个库，它遵循 Python 数据库 API 规范 V2.0，并包含了 pure-Python MySQL 客户端库。<br><a id="more"></a></p>
 <h2 id="安装-pymysql"><a href="#安装-pymysql" class="headerlink" title="安装 pymysql"></a>安装 pymysql</h2><h3 id="pip-安装"><a href="#pip-安装" class="headerlink" title="pip 安装"></a>pip 安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install PyMysql</span><br></pre></td></tr></table></figure>
-<h3 id="pycharm-安装"><a href="#pycharm-安装" class="headerlink" title="pycharm 安装"></a>pycharm 安装</h3><p>第一步:<br><img src="p0hkrowc2.bkt.clouddn.com/201712052002_170.png" alt=""></p>
+<h3 id="pycharm-安装"><a href="#pycharm-安装" class="headerlink" title="pycharm 安装"></a>pycharm 安装</h3><p>第一步:<br><img src="http://p0hkrowc2.bkt.clouddn.com/201712052002_170.png" alt=""></p>
 <p>第二步：</p>
-<p><img src="p0hkrowc2.bkt.clouddn.com/201712052002_354.png" alt=""></p>
+<p><img src="http://p0hkrowc2.bkt.clouddn.com/201712052002_354.png" alt=""></p>
 <p>第三步：</p>
-<p><img src="p0hkrowc2.bkt.clouddn.com/201712052003_543.png" alt=""></p>
+<p><img src="http://p0hkrowc2.bkt.clouddn.com/201712052003_543.png" alt=""></p>
 <h2 id="使用-PyMySQL"><a href="#使用-PyMySQL" class="headerlink" title="使用 PyMySQL"></a>使用 PyMySQL</h2><h3 id="导包"><a href="#导包" class="headerlink" title="导包"></a>导包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import pymysql</span><br></pre></td></tr></table></figure>
 <h3 id="打开数据库链接"><a href="#打开数据库链接" class="headerlink" title="打开数据库链接"></a>打开数据库链接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conn = pymysql.connect(host=&quot;localhost&quot;, port=3306, user=&quot;root&quot;,</span><br><span class="line"> passwd=&quot;root&quot;, db=&quot;pysql&quot;,charset=&quot;utf8&quot;)</span><br></pre></td></tr></table></figure>
 <ul>
