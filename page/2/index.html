@@ -296,576 +296,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hanyueye.com/2017/12/04/Java-jichu-texing/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="王聪">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="如果还有梦就追">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/04/Java-jichu-texing/" itemprop="url">Java 三大特性</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-04T15:07:51+08:00">
-                2017-12-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/死磕Java/" itemprop="url" rel="index">
-                    <span itemprop="name">死磕Java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="三大特性"><a href="#三大特性" class="headerlink" title="三大特性"></a>三大特性</h1><h2 id="三大特性之封装"><a href="#三大特性之封装" class="headerlink" title="三大特性之封装"></a>三大特性之封装</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><blockquote>
-<p>封装从字面上来理解就是包装的意思，专业点就是信息隐藏，是指利用抽象数据类型将数据和基于数据的操作封装在一起，使其构成一个不可分割的独立实体，数据被保护在抽象数据类型的内部，尽可能地隐藏内部的细节，只保留一些对外接口使之与外部发生联系。</p>
-</blockquote>
-<p>  对于封装而言，一个对象它所封装的是自己的属性和方法，所以它是不需要依赖其他对象就可以完成自己的操作。</p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>  使用封装的好处：</p>
-<ul>
-<li>良好的封装能够减少耦合。</li>
-<li>类内部的结构可以自由修改。</li>
-<li>可以对成员进行更精确的控制。</li>
-<li>隐藏信息，实现细节。</li>
-</ul>
-<p>首先我们先来看这个类：Husband.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">public class Husband &#123;</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">     * 对属性的封装</span><br><span class="line">     * 一个人的姓名、性别、年龄、妻子都是这个人的私有属性</span><br><span class="line">     */</span><br><span class="line">    private String name ;</span><br><span class="line">    private String sex ;</span><br><span class="line">    private int age ;</span><br><span class="line">    private Wife wife;</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">     * setter()、getter()是该对象对外开发的接口</span><br><span class="line">     */</span><br><span class="line">    public String getName() &#123;</span><br><span class="line">        return name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setName(String name) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getSex() &#123;</span><br><span class="line">        return sex;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setSex(String sex) &#123;</span><br><span class="line">        this.sex = sex;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int getAge() &#123;</span><br><span class="line">        return age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setAge(int age) &#123;</span><br><span class="line">        this.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setWife(Wife wife) &#123;</span><br><span class="line">        this.wife = wife;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="set-方法"><a href="#set-方法" class="headerlink" title="set()方法"></a>set()方法</h4><p>但是哪天如果我们需要修改Husband，例如将age修改为String类型的呢？你只有一处使用了这个类还好，如果你有几十个甚至上百个这样地方，你是不是要改到崩溃。如果使用了封装，我们完全可以不需要做任何修改，只需要稍微改变下Husband类的setAge()方法即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public class Husband &#123;</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">     * 对属性的封装</span><br><span class="line">     * 一个人的姓名、性别、年龄、妻子都是这个人的私有属性</span><br><span class="line">     */</span><br><span class="line">    private String name ;</span><br><span class="line">    private String sex ;</span><br><span class="line">    private String age ;    /* 改成 String类型的*/</span><br><span class="line">    private Wife wife;</span><br><span class="line"></span><br><span class="line">    public String getAge() &#123;</span><br><span class="line">        return age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setAge(int age) &#123;</span><br><span class="line">        //转换即可</span><br><span class="line">        this.age = String.valueOf(age);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /** 省略其他属性的setter、getter **/</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="get-方法"><a href="#get-方法" class="headerlink" title="get()方法"></a>get()方法</h4><p> 上面都是对setter方法的控制，其实通过使用封装我们也能够对对象的出口做出很好的控制。例如性别我们在数据库中一般都是已1、0方式来存储的，但是在前台我们又不能展示1、0，这里我们只需要在getter()方法里面做一些转换即可。<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public String getSexName() &#123;</span><br><span class="line">       if(&quot;0&quot;.equals(sex))&#123;</span><br><span class="line">           sexName = &quot;女&quot;;</span><br><span class="line">       &#125;</span><br><span class="line">       else if(&quot;1&quot;.equals(sex))&#123;</span><br><span class="line">           sexName = &quot;男&quot;;</span><br><span class="line">       &#125;</span><br><span class="line">       else&#123;</span><br><span class="line">           sexName = &quot;人妖???&quot;;</span><br><span class="line">       &#125;</span><br><span class="line">       return sexName;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="三大特性之继承"><a href="#三大特性之继承" class="headerlink" title="三大特性之继承"></a>三大特性之继承</h2><h3 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h3><p> <strong>继承是把共性的东西提取出来，做成一个单独的类，这个类叫做父类，新建的类可以通过继承父类来获的父类的属性，行为，新建的类叫子类，子类也可以有新的属性，行为。</strong></p>
-<p> 在《Think in java》中有这样一句话：</p>
-<blockquote>
-<p>复用代码是Java众多引人注目的功能之一。但要想成为极具革命性的语言，仅仅能够复制代码并对加以改变是不够的，它还必须能够做更多的事情。在这句话中最引人注目的是“复用代码”,尽可能的复用代码使我们程序员一直在追求的，现在我来介绍一种复用代码的方式，也是java三大特性之一—继承。</p>
-</blockquote>
-<h3 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h3><h4 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h4><p> 上个例子可以看出我们定义了一个Husband(丈夫)，这时候如果想定义一个Wife(妻子)又要像定义Husband一样在写一次姓名，性别，年龄。<br> 作为一个想最大限度实现复用代码的我们是不能够忍受这样的重复代码，如果再来一个孩子。。。我们是不是又要一遍又一遍的写呢。那么我们如何来实现这些类的可复用呢？利用  <strong>继承</strong> ！！</p>
-<p> 我们先来想一下丈夫，妻子，孩子他们都是人，而且都有一些共性，都有名字，年龄，性别等等，而且他们都能走路，吃饭等共同行为，所以从这里我们可以发现他们都拥有人的属性和行为，同时也是从人那里继承来的这些属性和行为的。</p>
-<p>从上面我们就可以基本了解了继承的概念了，<br>通过使用继承我们能够非常方便地复用以前的代码，能够大大的提高开发的效率。<br>看下面代码，我们定义了一个<code>people</code>的父类：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">public class People &#123;</span><br><span class="line">    private String name;</span><br><span class="line">    private int age;</span><br><span class="line">    public void run()&#123;</span><br><span class="line">        System.out.println(&quot;人可以行走&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getName() &#123;</span><br><span class="line">        return name;</span><br><span class="line">    &#125;</span><br><span class="line">    public void setName(String name) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    public int getAge() &#123;</span><br><span class="line">        return age;</span><br><span class="line">    &#125;</span><br><span class="line">    public void setAge(int age) &#123;</span><br><span class="line">        this.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>然后定义了一个<code>husband</code>和<code>Wife</code>的类都继承了<code>people</code>类：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class Husband extends People &#123;</span><br><span class="line">    private String sex;</span><br><span class="line">    public Husband()&#123;</span><br><span class="line">        setName(&quot;abc&quot;);</span><br><span class="line">        setAge(25);</span><br><span class="line">    &#125;</span><br><span class="line">    public void say()&#123;</span><br><span class="line">        System.out.println(&quot;丈夫有说话的能力，丈夫的年龄是：&quot;+ getAge()+&quot;丈夫的姓名是&quot;+getName());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public class Wife extends People &#123;</span><br><span class="line">    private String sex;</span><br><span class="line">    public Wife()&#123;</span><br><span class="line">        setName(&quot;123&quot;);</span><br><span class="line">        setAge(24);</span><br><span class="line">    &#125;</span><br><span class="line">    public void say()&#123;</span><br><span class="line">        System.out.println(&quot;妻子有说话的能力，妻子的年龄是：&quot;+ getAge()+&quot;妻子的姓名是&quot;+getName());</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Wife w = new Wife();</span><br><span class="line">        w.say();</span><br><span class="line">        w.run();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>由此可见，父类people 中的属性，方法。子类都可以访问，使用。<br>继承所描述的是<code>is-a</code>的关系，如果有两个对象A和B，若可以描述为<code>A是B</code>，则可以表示A继承B，其中B是被继承者称之为父类或者超类，A是继承者称之为子类或者派生类。</p>
-<blockquote>
-<pre><code>诚然，继承定义了类如何相互关联，共享特性。对于若干个相同或者相识的类，我们可以抽象出他们共有的行为或者属相并将其定义成一个父类或者超类，然后用这些类继承该父类，他们不仅可以拥有父类的属性、方法还可以定义自己独有的属性或者方法。
-</code></pre></blockquote>
-<p> 同时在使用继承时需要记住三句话：</p>
-<ul>
-<li>子类拥有父类非<code>private</code>的属性和方法。</li>
-<li>子类可以拥有自己属性和方法，即子类可以对父类进行扩展。</li>
-<li>子类可以用自己的方式实现父类的方法。（以后介绍）。</li>
-</ul>
-<h4 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h4><p>通过前面我们知道子类可以继承父类的属性和方法，除了那些<code>private</code>的外还有一样是子类继承不了的—构造器。对于构造器而言，它只能够被调用，而不能被继承。 调用父类的构造方法我们使用<code>super()</code>即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">public class Person &#123;</span><br><span class="line">    protected String name;</span><br><span class="line">    protected int age;</span><br><span class="line">    protected String sex;</span><br><span class="line"></span><br><span class="line">    Person()&#123;</span><br><span class="line">        System.out.println(&quot;Person Constrctor...&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Husband extends Person&#123;</span><br><span class="line">    private Wife wife;</span><br><span class="line"></span><br><span class="line">    Husband()&#123;</span><br><span class="line">        System.out.println(&quot;Husband Constructor...&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Husband husband  = new Husband();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">print：</span><br><span class="line">Person Constrctor...</span><br><span class="line">Husband Constructor...</span><br></pre></td></tr></table></figure></p>
-<p>这里我们并没有调用父类的构造函数，看出来已经输出了。</p>
-<blockquote>
-<p>编译器会默认给子类调用父类的构造器。</p>
-</blockquote>
-<p>  但是，这个默认调用父类的构造器是有前提的：父类有默认构造器。如果父类没有默认构造器，我们就要必须显示的使用<code>super()</code>来调用父类构造器，否则编译器会报错：无法找到符合父类形式的构造器。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public class Person &#123;</span><br><span class="line">protected String name;</span><br><span class="line">protected int age;</span><br><span class="line">protected String sex;</span><br><span class="line">Person(String name)&#123;</span><br><span class="line">    System.out.println(&quot;Person Constrctor-----&quot; + name);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Husband extends Person&#123;</span><br><span class="line">private Wife wife;</span><br><span class="line"></span><br><span class="line">Husband()&#123;</span><br><span class="line">    super(&quot;chenssy&quot;);</span><br><span class="line">    System.out.println(&quot;Husband Constructor...&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Husband husband  = new Husband();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">print:</span><br><span class="line">Person Constrctor-----chenssy</span><br><span class="line">Husband Constructor...</span><br></pre></td></tr></table></figure>
-<h4 id="protected关键字"><a href="#protected关键字" class="headerlink" title="protected关键字"></a>protected关键字</h4><p><code>private</code>访问修饰符，对于封装而言，是最好的选择，但这个只是基于理想的世界，有时候我们需要这样的需求：我们需要将某些事物尽可能地对这个世界隐藏，但是仍然允许子类的成员来访问它们。这个时候就需要使用到<code>protected</code>。</p>
-<p><strong>对于protected而言，它指明就类用户而言，他是private，但是对于任何继承与此类的子类而言或者其他任何位于同一个包的类而言，他却是可以访问的。</strong></p>
-<h4 id="向上转型"><a href="#向上转型" class="headerlink" title="向上转型"></a>向上转型</h4><p>在上面的继承中我们谈到继承是is-a的相互关系，猫继承与动物，所以我们可以说猫是动物，或者说猫是动物的一种。这样将猫看做动物就是向上转型。如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class Person &#123;</span><br><span class="line">    public void display()&#123;</span><br><span class="line">        System.out.println(&quot;Play Person...&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    static void display(Person person)&#123;</span><br><span class="line">        person.display();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Husband extends Person&#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Husband husband = new Husband();</span><br><span class="line">        Person.display(husband);      //向上转型</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>  在这我们通过Person.display(husband)。这句话可以看出husband是person类型。</p>
-<h3 id="谨慎继承"><a href="#谨慎继承" class="headerlink" title="谨慎继承"></a>谨慎继承</h3><p>  上面讲了继承所带来的诸多好处，那我们是不是就可以大肆地使用继承呢？送你一句话：慎用继承。<br> 首先我们需要明确，继承存在如下缺陷：</p>
-<ul>
-<li>父类变，子类就必须变。</li>
-<li>继承破坏了封装，对于父类而言，它的实现细节对与子类来说都是透明的。</li>
-<li>继承是一种强耦合关系。<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><blockquote>
-<p>指允许不同类的对象对同一消息做出响应。即同一消息可以根据发送对象的不同而采用多种不同的行为方式。（发送消息就是函数调用）</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="多态的实现"><a href="#多态的实现" class="headerlink" title="多态的实现"></a>多态的实现</h3><h4 id="实现条件"><a href="#实现条件" class="headerlink" title="实现条件"></a>实现条件</h4><blockquote>
-<pre><code>Java实现多态有三个必要条件：继承、重写、向上转型。
-</code></pre></blockquote>
-<ul>
-<li>继承：在多态中必须存在有继承关系的子类和父类。</li>
-<li>重写：子类对父类中某些方法进行重新定义，在调用这些方法时就会调用子类的方法。</li>
-<li>向上转型：在多态中需要将子类的引用赋给父类对象，只有这样该引用才能够具备技能调用父类的方法和子类的方法。<br><strong>对于Java而言，它多态的实现机制遵循一个原则：当父类对象引用子类对象时，被引用对象的类型决定了调用谁的成员方法，但是这个被调用的方法必须是在父类中定义过的，也就是说被子类覆盖的方法。</strong><h4 id="实现形式"><a href="#实现形式" class="headerlink" title="实现形式"></a>实现形式</h4>在Java中有两种形式可以实现多态。继承和接口。<h5 id="基于继承实现的多态"><a href="#基于继承实现的多态" class="headerlink" title="基于继承实现的多态"></a>基于继承实现的多态</h5> 基于继承的实现机制主要表现在父类和继承该父类的一个或多个子类对某些方法的重写，多个子类对同一方法的重写可以表现出不同的行为。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line">public class Wine &#123;</span><br><span class="line">    private String name;</span><br><span class="line"></span><br><span class="line">    public String getName() &#123;</span><br><span class="line">        return name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setName(String name) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Wine()&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String drink()&#123;</span><br><span class="line">        return &quot;喝的是 &quot; + getName();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 重写toString()</span><br><span class="line">     */</span><br><span class="line">    public String toString()&#123;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class JNC extends Wine&#123;</span><br><span class="line">    public JNC()&#123;</span><br><span class="line">        setName(&quot;JNC&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 重写父类方法，实现多态</span><br><span class="line">     */</span><br><span class="line">    public String drink()&#123;</span><br><span class="line">        return &quot;喝的是 &quot; + getName();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 重写toString()</span><br><span class="line">     */</span><br><span class="line">    public String toString()&#123;</span><br><span class="line">        return &quot;Wine : &quot; + getName();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class JGJ extends Wine&#123;</span><br><span class="line">    public JGJ()&#123;</span><br><span class="line">        setName(&quot;JGJ&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 重写父类方法，实现多态</span><br><span class="line">     */</span><br><span class="line">    public String drink()&#123;</span><br><span class="line">        return &quot;喝的是 &quot; + getName();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 重写toString()</span><br><span class="line">     */</span><br><span class="line">    public String toString()&#123;</span><br><span class="line">        return &quot;Wine : &quot; + getName();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Test &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        //定义父类数组</span><br><span class="line">        Wine[] wines = new Wine[2];</span><br><span class="line">        //定义两个子类</span><br><span class="line">        JNC jnc = new JNC();</span><br><span class="line">        JGJ jgj = new JGJ();</span><br><span class="line"></span><br><span class="line">        //父类引用子类对象</span><br><span class="line">        wines[0] = jnc;</span><br><span class="line">        wines[1] = jgj;</span><br><span class="line"></span><br><span class="line">        for(int i = 0 ; i &lt; 2 ; i++)&#123;</span><br><span class="line">            System.out.println(wines[i].toString() + &quot;--&quot; + wines[i].drink());</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(&quot;-------------------------------&quot;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">print :</span><br><span class="line">Wine : JNC--喝的是 JNC</span><br><span class="line">Wine : JGJ--喝的是 JGJ</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>在上面的代码中JNC、JGJ继承Wine，并且重写了drink()、toString()方法，程序运行结果是调用子类中方法，输出JNC、JGJ的名称，这就是多态的表现。不同的对象可以执行相同的行为，但是他们都需要通过自己的实现方式来执行，这就要得益于向上转型了。</p>
-<blockquote>
-<p>当子类重写父类的方法被调用时，只有对象继承链中的最末端的方法才会被调用。</p>
-</blockquote>
-<p>所以基于继承实现的多态可以总结如下：对于引用子类的父类类型，在处理该引用时，它适用于继承该父类的所有子类，子类对象的不同，对方法的实现也就不同，执行相同动作产生的行为也就不同。</p>
-<h2 id="经典实例！"><a href="#经典实例！" class="headerlink" title="经典实例！"></a>经典实例！</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"> class A &#123;</span><br><span class="line">    public String show(D obj) &#123;</span><br><span class="line">        return (&quot;A and D&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String show(A obj) &#123;</span><br><span class="line">        return (&quot;A and A&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> class B extends A&#123;</span><br><span class="line">    public String show(B obj)&#123;</span><br><span class="line">        return (&quot;B and B&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String show(A obj)&#123;</span><br><span class="line">        return (&quot;B and A&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> class C extends B&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> class D extends B&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Test &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        A a1 = new A();</span><br><span class="line">        A a2 = new B();</span><br><span class="line">        B b = new B();</span><br><span class="line">        C c = new C();</span><br><span class="line">        D d = new D();</span><br><span class="line"></span><br><span class="line">        System.out.println(&quot;1--&quot; + a1.show(b));</span><br><span class="line">        System.out.println(&quot;2--&quot; + a1.show(c));</span><br><span class="line">        System.out.println(&quot;3--&quot; + a1.show(d));</span><br><span class="line">        System.out.println(&quot;4--&quot; + a2.show(b));</span><br><span class="line">        System.out.println(&quot;5--&quot; + a2.show(c));</span><br><span class="line">        System.out.println(&quot;6--&quot; + a2.show(d));</span><br><span class="line">        System.out.println(&quot;7--&quot; + b.show(b));</span><br><span class="line">        System.out.println(&quot;8--&quot; + b.show(c));</span><br><span class="line">        System.out.println(&quot;9--&quot; + b.show(d));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>运行结果：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1--A and A</span><br><span class="line">2--A and A</span><br><span class="line">3--A and D</span><br><span class="line">4--B and A</span><br><span class="line">5--B and A</span><br><span class="line">6--A and D</span><br><span class="line">7--B and B</span><br><span class="line">8--B and B</span><br><span class="line">9--A and D</span><br></pre></td></tr></table></figure></p>
-<h3 id="1-2-3"><a href="#1-2-3" class="headerlink" title="1 2 3"></a>1 2 3</h3><p>在这里看结果1、2、3还好理解，从4开始就开始糊涂了，对于4来说为什么输出不是<code>B and B</code>呢？</p>
-<h3 id="4"><a href="#4" class="headerlink" title="4"></a>4</h3><p>我们分析一下4：<br><code>A a2 = new B()</code> a2是 A的对象指向了B <code>a2.show(b)</code>, <code>b=new B()</code> 去<code>B</code>对象里查找包含<code>b</code>的对象 显然是这个方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public String show(A obj) &#123;</span><br><span class="line">       return (&quot;A and A&quot;);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
-<p>但是 A对象指向了B，B中对A的方法进行了重写，所以调用的是B中的方法<br>所以返回 <code>B and A</code></p>
-<h3 id="5"><a href="#5" class="headerlink" title="5"></a>5</h3><p>也是同理 返回 <code>B and A</code></p>
-<h3 id="6"><a href="#6" class="headerlink" title="6"></a>6</h3><p><code>A a2 = new B();</code>，a2是 A的对象指向了B <code>a2.show(d)</code> <code>d=new D()</code><br>去<code>B</code>对象里查找包含<code>d</code>的对象，因为B继承A 所以A中所有方法B都可以用。<br>有一个符合条件的方法所以直接调用了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public String show(D obj) &#123;</span><br><span class="line">       return (&quot;A and D&quot;);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
-<p>返回 <code>A and D</code></p>
-<h3 id="7"><a href="#7" class="headerlink" title="7"></a>7</h3><p><code>B b = new B();</code>  b 是 B 的对象指向了B，<code>b.show(b)</code> <code>b= new B()</code><br>去<code>B</code>对象里查找包含<code>b</code>的对象 显然是这个方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public String show(B obj)&#123;</span><br><span class="line">        return (&quot;B and B&quot;);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<p>返回 <code>B and B</code></p>
-<h3 id="8"><a href="#8" class="headerlink" title="8"></a>8</h3><p>同理 返回 <code>B and B</code></p>
-<h3 id="9"><a href="#9" class="headerlink" title="9"></a>9</h3><p><code>B b = new B();</code>，b是 B的对象指向了B <code>b.show(d)</code> <code>d=new D()</code><br>去<code>B</code>对象里查找包含<code>d</code>的对象，因为B继承A 所以A中所有方法B都可以用。<br>有一个符合条件的方法所以直接调用了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public String show(D obj) &#123;</span><br><span class="line">       return (&quot;A and D&quot;);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
-<p>返回 <code>A and D</code></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hanyueye.com/2017/12/04/Python-jichu-xiushifu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="王聪">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="如果还有梦就追">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/04/Python-jichu-xiushifu/" itemprop="url">Java 修饰符</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-04T15:07:51+08:00">
-                2017-12-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/死磕Java/" itemprop="url" rel="index">
-                    <span itemprop="name">死磕Java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Java修饰符"><a href="#Java修饰符" class="headerlink" title="Java修饰符"></a>Java修饰符</h1><p>修饰符分类：</p>
-<ul>
-<li>权限修饰符：<code>public</code>、<code>protected</code>、<code>default</code>、<code>private</code></li>
-<li><p>其他修饰符：<code>abstract</code>、<code>static</code>、<code>final</code></p>
-<h2 id="权限修饰符"><a href="#权限修饰符" class="headerlink" title="权限修饰符"></a>权限修饰符</h2><h3 id="public"><a href="#public" class="headerlink" title="public"></a>public</h3></li>
-<li><p>public的使用对象：public可以修饰 类、抽象类、接口，还可以修饰 方法和变量</p>
-</li>
-<li>public修饰的对象可以被所以其他类访问</li>
-</ul>
-<h3 id="protected"><a href="#protected" class="headerlink" title="protected"></a>protected</h3><ul>
-<li>protected的使用对象：protected可以修饰 方法和变量，不能修饰类（外部类） ，内部类较特殊，后面单独研究。</li>
-<li>protected修饰的对象可以被 同一包内的类或它的子类所访问</li>
-</ul>
-<h3 id="default"><a href="#default" class="headerlink" title="default"></a>default</h3><ul>
-<li>default的使用对象：default可以修饰 类、抽象类、接口，还可以修饰 方法和变量</li>
-<li>default修饰的对象可以被 同一包下的类访问</li>
-</ul>
-<h3 id="private"><a href="#private" class="headerlink" title="private"></a>private</h3><ul>
-<li>private的使用对象：private可以修饰 方法和变量，不能修饰类（外部类）</li>
-<li>private修饰的对象只在该类内部可见，外部不可访问，包括他的子类也不能访问、不能覆盖</li>
-</ul>
-<h3 id="换个角度"><a href="#换个角度" class="headerlink" title="换个角度"></a>换个角度</h3><ul>
-<li>类、抽象类、接口可以被public、default修饰，default修饰的类、抽象类、接口只本包内可见</li>
-<li>方法和变量可以被public、protected、default、private所有权限修饰符修饰</li>
-</ul>
-<h2 id="其他修饰符"><a href="#其他修饰符" class="headerlink" title="其他修饰符"></a>其他修饰符</h2><h3 id="abstract"><a href="#abstract" class="headerlink" title="abstract"></a>abstract</h3><ul>
-<li>abstract用于修饰 类、接口或方法</li>
-<li>abstract修饰的类即抽象类不能初始化，含未实现即abstract的方法</li>
-<li>所有的接口默认是abstract的，当然也可以显示用abstract修饰</li>
-</ul>
-<h3 id="final"><a href="#final" class="headerlink" title="final"></a>final</h3><ul>
-<li>final用于修饰 类、变量或方法</li>
-<li>final类不能被继承、final变量不能被修改、final方法不能被覆盖</li>
-<li>final变量必须初始化，可以在声明时或构造函数里面赋值</li>
-<li>final变量如果是引用变量，变量的value可变，但不能给引用重新赋值（新对象）</li>
-<li>final变量如果同时被static修饰，那必须在声明时初始化，不能放到构造函数</li>
-<li>构造函数里面调用的方法最好是final的</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class FinalTest&#123;</span><br><span class="line">    private final List foo = new ArrayList();//</span><br><span class="line"></span><br><span class="line">    public FinalTest()</span><br><span class="line">    &#123;</span><br><span class="line">        //foo = new ArrayList(); 如果声明时没有初始化，可以在这里初始化</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void updateFoo()&#123;</span><br><span class="line">        foo.add( new String() );//可以改变被应用对象的值</span><br><span class="line">        //foo = new ArrayList(); //编译错误，不能赋予新的对象</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="static"><a href="#static" class="headerlink" title="static"></a>static</h3><ul>
-<li>static可修饰 变量、方法、代码块、内部类，不能修饰外部类</li>
-<li>static的变量或方法属于具体的类，而不是某个实例，所有实例共享该变量或方法，实例可以改变static变量，也可以通过类名直接调用</li>
-<li>static的方法不能直接访问实例变量或方法，static方法里面也不能使用this</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hanyueye.com/2017/12/04/Java/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="王聪">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="如果还有梦就追">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/04/Java/" itemprop="url">java</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-04T10:54:25+08:00">
-                2017-12-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://hanyueye.com/2017/12/04/Python-parser-jinjie/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -897,7 +327,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-04T10:54:25+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-04T18:54:25+08:00">
                 2017-12-04
               </time>
             
@@ -1054,7 +484,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-04T10:54:25+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-04T16:54:25+08:00">
                 2017-12-04
               </time>
             
@@ -1136,6 +566,441 @@
             </a>
           </div>
           <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hanyueye.com/2017/12/04/Python-anzhuang/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王聪">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="如果还有梦就追">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/04/Python-anzhuang/" itemprop="url">Python 安装</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-04T15:07:51+08:00">
+                2017-12-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="python-环境准备"><a href="#python-环境准备" class="headerlink" title="python 环境准备"></a>python 环境准备</h1><h2 id="安装-Python"><a href="#安装-Python" class="headerlink" title="安装 Python"></a>安装 Python</h2><ol>
+<li>首先从Python的官方网站<code>python.org</code>下载最新的2.7版本，网速慢的同学请移步国内镜像。
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/12/04/Python-anzhuang/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hanyueye.com/2017/12/04/Python-zhengze/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王聪">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="如果还有梦就追">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/04/Python-zhengze/" itemprop="url">Python re</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-04T15:07:51+08:00">
+                2017-12-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="了解正则表达式"><a href="#了解正则表达式" class="headerlink" title="了解正则表达式"></a>了解正则表达式</h1><blockquote>
+<p>正则表达式是对字符串操作的一种逻辑公式，就是用事先定义好的一些特定字符、及这些特定字符的组合，组成一个“规则字符串”，这个“规则字符串”用来表达对字符串的一种过滤逻辑。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/12/04/Python-zhengze/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hanyueye.com/2017/12/04/Java/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王聪">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="如果还有梦就追">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/04/Java/" itemprop="url">java</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-04T10:54:25+08:00">
+                2017-12-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
         
       
     </div>
