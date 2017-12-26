@@ -424,11 +424,633 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hanyueye.com/2017/03/18/Java基础-集合框架工具类-Arrays/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王聪">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="如果还有梦就追">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/18/Java基础-集合框架工具类-Arrays/" itemprop="url">Java基础：集合框架工具类之Arrays</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-18T16:11:13+08:00">
+                2017-03-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java基础/" itemprop="url" rel="index">
+                    <span itemprop="name">Java基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Arrays 是个 Java.util 下的类，是针对数组的一个工具类，提供一系列静态方法，实现对数组的二分查找、等操作。</p>
+<h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><h3 id="asList"><a href="#asList" class="headerlink" title="asList"></a>asList</h3><p>将一个数组转变成一个List(确切的来说是ArrayList)，注意这个List是定长的，企图添加或者删除数据都会报错（java.lang.UnsupportedOperationException）. </p>
+<p>方法定义：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">List&lt;T&gt; <span class="title">asList</span><span class="params">(T... a)</span></span></span><br></pre></td></tr></table></figure></p>
+<div class="note danger"><p>如果数组中的元素都是对象。那么变成集合时，数组中的元素就直接转成集合中的元素。<br>如果数组中的元素都是基本数据类型，那么会将该数组作为集合中的元素存在。</p></div>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/18/Java基础-集合框架工具类-Arrays/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hanyueye.com/2017/03/17/Java基础-集合框架工具类-Collections/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王聪">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="如果还有梦就追">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/17/Java基础-集合框架工具类-Collections/" itemprop="url">Java基础：集合框架工具类之Collections</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T22:37:22+08:00">
+                2017-03-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java基础/" itemprop="url" rel="index">
+                    <span itemprop="name">Java基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Collections 是个 Java.util 下的类，是针对集合类的一个工具类，提供一系列静态方法，实现对集合的查找、排序、替换、线程安全化（将非同步的集合转换成同步的）等操作。</p>
+<hr>
+<h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><h3 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h3><p>因为 Map 集合中有 TreeMap，Set 集合有 TreeSet，List 集合没有可排序的数据类型，所以提供了这个方法。</p>
+<p>方法定义：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T extends Comparable&lt;? <span class="keyword">super</span> T&gt;&gt; <span class="function"><span class="keyword">void</span> <span class="title">sort</span><span class="params">(List&lt;T&gt; list)</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="keyword">void</span> <span class="title">sort</span><span class="params">(List&lt;T&gt; list, Comparator&lt;? <span class="keyword">super</span> T&gt; c)</span></span></span><br></pre></td></tr></table></figure></p>
+<p>看起来可以比较复杂，其实就是传入一个 List 集合的元素，List 集合中的元素必须具备比较性，才能对元素进行排序。</p>
+<p>第一个方法是指元素本身必须实现 Comparable 接口。<br>第二个方法是指传入一个比较器。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/17/Java基础-集合框架工具类-Collections/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hanyueye.com/2017/03/16/Java基础-集合框架-TreeMap/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王聪">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="如果还有梦就追">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/16/Java基础-集合框架-TreeMap/" itemprop="url">Java基础：集合框架之TreeMap</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-16T14:20:05+08:00">
+                2017-03-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java基础/" itemprop="url" rel="index">
+                    <span itemprop="name">Java基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="总目录"><a href="#总目录" class="headerlink" title="总目录"></a>总目录</h2><ul>
+<li><a href="https://www.yfzzweb.com/Java%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6-%E6%A6%82%E8%BF%B0/" target="_blank" rel="noopener">集合框架概述</a><ul>
+<li><a href="https://www.yfzzweb.com/Java%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6-Collection/" target="_blank" rel="noopener">Collection</a><ul>
+<li><a href="https://www.yfzzweb.com/Java%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6-List/" target="_blank" rel="noopener">List</a></li>
+<li><a href="https://www.yfzzweb.com/Java%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6-Set/" target="_blank" rel="noopener">Set</a></li>
+</ul>
+</li>
+<li><a href="https://www.yfzzweb.com/Java%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6-Map" target="_blank" rel="noopener">Map</a><ul>
+<li><a href="https://www.yfzzweb.com/Java%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6-HashMap" target="_blank" rel="noopener">HashMap</a></li>
+<li><a href="https://www.yfzzweb.com/Java%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6-TreeMap" target="_blank" rel="noopener">TreeMap</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>TreeMap：底层是二叉树数据结构，线程不同步，可以用于给 Map 集合中所有的键进行排序。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/16/Java基础-集合框架-TreeMap/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hanyueye.com/2017/03/15/Java基础-集合框架-HashMap/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王聪">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="如果还有梦就追">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/15/Java基础-集合框架-HashMap/" itemprop="url">Java基础：集合框架之HashMap</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-15T07:10:11+08:00">
+                2017-03-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java基础/" itemprop="url" rel="index">
+                    <span itemprop="name">Java基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="总目录"><a href="#总目录" class="headerlink" title="总目录"></a>总目录</h2><ul>
+<li><a href="https://www.yfzzweb.com/Java%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6-%E6%A6%82%E8%BF%B0/" target="_blank" rel="noopener">集合框架概述</a><ul>
+<li><a href="https://www.yfzzweb.com/Java%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6-Collection/" target="_blank" rel="noopener">Collection</a><ul>
+<li><a href="https://www.yfzzweb.com/Java%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6-List/" target="_blank" rel="noopener">List</a></li>
+<li><a href="https://www.yfzzweb.com/Java%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6-Set/" target="_blank" rel="noopener">Set</a></li>
+</ul>
+</li>
+<li><a href="https://www.yfzzweb.com/Java%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6-Map" target="_blank" rel="noopener">Map</a><ul>
+<li><a href="https://www.yfzzweb.com/Java%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6-HashMap" target="_blank" rel="noopener">HashMap</a></li>
+<li><a href="https://www.yfzzweb.com/Java%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6-TreeMap" target="_blank" rel="noopener">TreeMap</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>HashMap：底层是哈希表数据结构，允许 null 键 null 值，但不推荐使用，线程不同步，效率高</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/15/Java基础-集合框架-HashMap/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -478,7 +1100,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -489,7 +1111,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -500,7 +1122,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
